@@ -1,4 +1,3 @@
-# from tkinter.messagebox import NO
 import psycopg2
 
 my_hostname = "localhost"
