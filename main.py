@@ -1,4 +1,12 @@
+# from unicodedata import name
 import psycopg2
+from flask import Flask, render_template #not working
+
+app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return render_template('results.html')
 
 my_hostname = "localhost"
 my_database = "postgres"
@@ -32,3 +40,8 @@ finally:
         conn.close()
         cursor.close()
 
+
+# print("hello")
+
+if __name__ == '__main__':
+    app.run()
